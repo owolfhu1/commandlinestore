@@ -102,7 +102,7 @@ public class App {
 
     private void storeMenu(Scanner scan, int store) {
 
-        System.out.println("---- Store Menu ----");
+        System.out.println("\n---- Store Menu ----");
         System.out.println("Current store: " + stores.get(store).getName());
         System.out.println("1) Add Employee");
         System.out.println("2) Remove Employee");
@@ -144,7 +144,7 @@ public class App {
     }
 
     private void addItemMenu(Scanner scan, int store) {
-        System.out.println("---- Add Item Menu ----");
+        System.out.println("\n---- Add Item Menu ----");
         System.out.println("Adding item to store: " + stores.get(store).getName());
         //int price, int quantity, String name, String description
         System.out.print("Item name: ");
@@ -166,7 +166,7 @@ public class App {
             System.out.println("There are no Items to remove, returning to store menu.");
             storeMenu(scan, store);
         } else {
-            System.out.println("---- Remove Item Menu ----");
+            System.out.println("\n---- Remove Item Menu ----");
             System.out.println("Inventory for store: " + stores.get(store).getName());
             stores.get(store).viewInventory();
             System.out.print("Please select item to remove: ");
@@ -180,7 +180,7 @@ public class App {
     }
 
     private void hireEmployeeMenu(Scanner scan, int store) {
-        System.out.println("---- Hire Employee Menu ----");
+        System.out.println("/n---- Hire Employee Menu ----");
         System.out.println("Hiring for store: " + stores.get(store).getName());
         System.out.print("Employee first name: ");
         String firstName = getString(scan);
@@ -201,7 +201,7 @@ public class App {
             System.out.println("There are no Employees to fire, returning to store menu.");
             storeMenu(scan, store);
         } else {
-            System.out.println("---- Fire Employee Menu ----");
+            System.out.println("\n---- Fire Employee Menu ----");
             System.out.println("Employees for store: " + stores.get(store).getName());
             stores.get(store).viewEmployees();
             System.out.print("Please select employee to fire: ");
