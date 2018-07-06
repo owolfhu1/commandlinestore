@@ -9,7 +9,7 @@ public class Store {
     private String description;
     private String location;
 
-    public Store(String name, String description, String location) {
+    Store(String name, String description, String location) {
         inventory = new Inventory();
         employees = new Employees();
         this.name = name;
@@ -23,39 +23,39 @@ public class Store {
                 name, location, description, employees.getEmployeeCount(), inventory.getItemCount());
     }
 
-    public void addEmployee(Employee employee) {
+    void addEmployee(Employee employee) {
         employees.addEmployee(employee);
     }
 
-    public void addInventory(InventoryItem item) {
+    void addInventory(InventoryItem item) {
         inventory.addItem(item);
     }
 
-    public boolean fireEmployee(int id) {
+    boolean fireEmployee(int id) {
         return employees.removeEmployee(id);
     }
 
-    public boolean removeItem(int id) {
+    boolean removeItem(int id) {
         return inventory.removeItem(id);
     }
 
-    public void viewEmployees() {
+    void viewEmployees() {
         employees.printEmployees();
     }
 
-    public void viewInventory() {
+    void viewInventory() {
         inventory.printInventory();
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getEmployeeCount() {
+    int getEmployeeCount() {
         return employees.getEmployeeCount();
     }
 
-    public int getItemCount() {
+    int getItemCount() {
         return inventory.getItemCount();
     }
 

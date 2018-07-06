@@ -7,7 +7,7 @@ public class InventoryItem {
     private int id, price, quantity;
     private String name, description;
 
-    public InventoryItem(int price, int quantity, String name, String description) {
+    InventoryItem(int price, int quantity, String name, String description) {
         id = ++itemCount;
         this.price = price;
         this.quantity = quantity;
@@ -20,7 +20,7 @@ public class InventoryItem {
         return String.format("%s: %s\n$%s.00 %s in stock", name, description, price, quantity);
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 }

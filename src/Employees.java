@@ -8,23 +8,23 @@ public class Employees {
 
     private Map<Integer, Employee> employees = new HashMap<>();
 
-    public void addEmployee(Employee employee) {
+    void addEmployee(Employee employee) {
         employees.put(employee.getId(), employee);
     }
 
-    public void printEmployees() {
+    void printEmployees() {
         for (int key : employees.keySet())
             System.out.println(String.format("%s) %s", key, employees.get(key)));
     }
 
-    public boolean removeEmployee(int key) {
+    boolean removeEmployee(int key) {
         boolean hasKey = employees.containsKey(key);
         if (hasKey)
             employees.remove(key);
         return hasKey;
     }
 
-    public int getEmployeeCount() {
+    int getEmployeeCount() {
         return employees.size();
     }
 

@@ -36,7 +36,7 @@ public class App {
         System.out.println("Bye! Have a good day!");
     }
 
-    public void mainMenu(Scanner scan) {
+    void mainMenu(Scanner scan) {
         int selection = 0;
 
         System.out.print("\n---- Main Menu ----\n1) Create Store\n2) Select Store\n3) Exit\nPlease enter your selection: ");

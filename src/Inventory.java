@@ -8,23 +8,23 @@ public class Inventory {
 
     private Map<Integer, InventoryItem> inventory = new HashMap<>();
 
-    public void addItem(InventoryItem item) {
+    void addItem(InventoryItem item) {
         inventory.put(item.getId(), item);
     }
 
-    public void printInventory() {
+    void printInventory() {
         for (int key : inventory.keySet())
             System.out.println(String.format("%s) %s", key, inventory.get(key)));
     }
 
-    public boolean removeItem(int key) {
+    boolean removeItem(int key) {
         boolean hasKey = inventory.containsKey(key);
         if (hasKey)
             inventory.remove(key);
         return hasKey;
     }
 
-    public int getItemCount() {
+    int getItemCount() {
         return inventory.size();
     }
 

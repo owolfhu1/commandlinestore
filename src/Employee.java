@@ -7,7 +7,7 @@ public class Employee {
     private int id, salary;
     private String firstName, lastName, position;
 
-    public Employee(int salary, String firstName, String lastName, String position) {
+    Employee(int salary, String firstName, String lastName, String position) {
         id = ++employeeCount;
         this.salary = salary;
         this.firstName = firstName;
@@ -20,7 +20,7 @@ public class Employee {
         return String.format("%s %s: %s - $%s.00", firstName, lastName, position, salary);
     }
 
-    public int getId() {
+    int getId() {
         return id;
     }
 }
